@@ -51,14 +51,14 @@ public class Member : EntityBase
     /// Relacionation City com members
     /// </summary>
     public int CityId { get; set; }
-    public City City { get; set; }
+    public City Citys { get; set; }
 
 
     /// <summary>
     /// Relacionation State com members
     /// </summary>
     public int StateId { get; set; }
-    public State State { get; set; }
+    public State States { get; set; }
 
 
     /// <summary>
