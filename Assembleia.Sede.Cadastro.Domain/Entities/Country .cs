@@ -1,4 +1,4 @@
-﻿using Assembleia.Sede.Cadastro.Domain.Entites.Base;
+﻿using Assembleia.Sede.Cadastro.Domain.Entities.Base;
 
 namespace Assembleia.Sede.Cadastro.Domain.Entities
 {
@@ -7,6 +7,6 @@ namespace Assembleia.Sede.Cadastro.Domain.Entities
         public string Name { get; set; }
         public string Iso2 { get; set; }
 
-        public ICollection<State> States { get; set; } = new List<State>();
+        public ICollection<State> States { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-﻿using Assembleia.Sede.Cadastro.Domain.Entites.Base;
+﻿using Assembleia.Sede.Cadastro.Domain.Entities.Base;
 using Assembleia.Sede.Cadastro.Domain.Entities;
 using Assembleia.Sede.Cadastro.Domain.Enums;
 
-namespace Assembleia.Sede.Cadastro.Domain.Entites;
+namespace Assembleia.Sede.Cadastro.Domain.Entities;
 
 public class Member : EntityBase
 {
