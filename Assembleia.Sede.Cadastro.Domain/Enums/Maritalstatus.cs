@@ -1,13 +1,22 @@
-﻿namespace Assembleia.Sede.Cadastro.Domain.Enums
+﻿using System.ComponentModel;
+
+namespace Assembleia.Sede.Cadastro.Domain.Enums
 {
     public enum Maritalstatus : byte
     {
-        None = 0,        // não informado
-        Single = 1,      // solteiro(a)
-        Married = 2,     // casado(a)
-        Widowed = 3,     // viúvo(a)
-        Divorced = 4,    // divorciado(a)
-        Separated = 5,   // separado(a)
-        StableUnion = 6  // união estável
+        [Description("Não Informado")]
+        None = 0,        
+        [Description("Solteiro")]
+        Single ,      
+        [Description("Casado(a)")]
+        Married,
+        [Description("Viúvo(a)")]
+        Widowed,     
+        [Description("Divorciado(a)")]
+        Divorced,    
+        [Description("Separado(a)")]
+        Separated,  
+        [Description("União Estável")]
+        StableUnion 
     }
 }
