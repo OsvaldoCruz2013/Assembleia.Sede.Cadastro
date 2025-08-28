@@ -1,9 +1,8 @@
-﻿using Assembleia.Sede.Cadastro.Domain.Entites.Base;
+﻿using Assembleia.Sede.Cadastro.Domain.Entities.Base;
 using Assembleia.Sede.Cadastro.Domain.Entities;
 using Assembleia.Sede.Cadastro.Domain.Enums;
-using System.Security.Cryptography.X509Certificates;
 
-namespace Assembleia.Sede.Cadastro.Domain.Entites;
+namespace Assembleia.Sede.Cadastro.Domain.Entities;
 
 public class Member : EntityBase
 {
@@ -33,39 +32,20 @@ public class Member : EntityBase
     public bool IsFemaleChurchMember { get; set; } //o conjuge é membro da igreja?
     public bool IsChildrenAreInChurch { get; set; } //os filhos estão na igreja?
     public bool IsWhichChurchIsComing { get; set; } //qual igreja está vindo?
-    public string City { get; set; } //cidade - (entidade)
     public DateTime? BaptizedBbyImmersion { get; set; } //  batizado por imersão em:
     public string ByTheChruch { get; set; } //nome da igreja 
     public string WithHolySpirit { get; set; } //com espirito santo em:
     public DateTime Admitted { get; set; } // admitido em:
-
-
+    
     /// <summary>
     /// Relacionation Congregação com members
     /// </summary>
     public int CongregationId { get; set; }
     public Congregation Congregation { get; set; }
 
-
     /// <summary>
     /// Relacionation City com members
     /// </summary>
     public int CityId { get; set; }
-    public City City { get; set; }
-
-
-    /// <summary>
-    /// Relacionation State com members
-    /// </summary>
-    public int StateId { get; set; }
-    public State State { get; set; }
-
-
-    /// <summary>
-    /// Relacionation Country com members
-    /// </summary>
-    public int CountryId { get; set; }
-    public Country Country { get; set; }
-
-
+    public City City { get; set; } 
 }

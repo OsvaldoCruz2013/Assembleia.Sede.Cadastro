@@ -1,4 +1,4 @@
-﻿using Assembleia.Sede.Cadastro.Domain.Entites.Base;
+﻿using Assembleia.Sede.Cadastro.Domain.Entities.Base;
 using System.Collections.Generic;
 
 
@@ -12,6 +12,6 @@ namespace Assembleia.Sede.Cadastro.Domain.Entities
         public int CountryId { get; set; }
         public Country Country { get; set; }
 
-        public ICollection<City> Cities { get; set; } = new List<City>();
+        public ICollection<City> Cities { get; set; } 
     }
 }

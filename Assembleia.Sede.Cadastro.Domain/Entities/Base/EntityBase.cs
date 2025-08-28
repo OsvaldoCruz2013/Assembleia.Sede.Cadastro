@@ -1,6 +1,6 @@
 ﻿using Assembleia.Sede.Cadastro.Domain.Enums;
 
-namespace Assembleia.Sede.Cadastro.Domain.Entites.Base
+namespace Assembleia.Sede.Cadastro.Domain.Entities.Base
 {
     public class EntityBase
     {

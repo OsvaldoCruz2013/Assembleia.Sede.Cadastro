@@ -1,4 +1,4 @@
-﻿using Assembleia.Sede.Cadastro.Domain.Entites.Base;
+﻿using Assembleia.Sede.Cadastro.Domain.Entities.Base;
 
 namespace Assembleia.Sede.Cadastro.Domain.Entities
 {

@@ -1,14 +1,26 @@
-﻿namespace Assembleia.Sede.Cadastro.Domain.Enums
+﻿using System.ComponentModel;
+
+namespace Assembleia.Sede.Cadastro.Domain.Enums
 {
     public enum School : byte
     {
+        [Description("Não Informado")]
         Unknown = 0,
-        Elementary = 1,   // Fundamental
-        HighSchool = 2,   // Médio
-        Technical = 3,    // Técnico
-        Undergraduate = 4,// Superior
-        Postgraduate = 5, // Pós
-        Masters = 6,      // Mestrado
-        Doctorate = 7     // Doutorado
+        [Description("Fundamental")]
+        Elementary,   
+        [Description("Médio")]
+        HighSchool,   
+        [Description("Técnico")]
+        Technical,   
+        [Description("Superior - Completo")]
+        CompleteGraduation,
+        [Description("Superior - Incompleto")]
+        IncompleteGraduation,
+        [Description("Pós - Graduação")]
+        Postgraduate, 
+        [Description("Mestrado")]
+        Masters,      
+        [Description("Doutorado")]
+        Doctorate     
     }
 }
