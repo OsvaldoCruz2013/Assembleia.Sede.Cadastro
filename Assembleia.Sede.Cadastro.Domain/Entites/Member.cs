@@ -51,21 +51,6 @@ public class Member : EntityBase
     /// Relacionation City com members
     /// </summary>
     public int CityId { get; set; }
-    public City Citys { get; set; }
-
-
-    /// <summary>
-    /// Relacionation State com members
-    /// </summary>
-    public int StateId { get; set; }
-    public State States { get; set; }
-
-
-    /// <summary>
-    /// Relacionation Country com members
-    /// </summary>
-    public int CountryId { get; set; }
-    public Country Country { get; set; }
-
+    public City Citys { get; set; } 
 
 }

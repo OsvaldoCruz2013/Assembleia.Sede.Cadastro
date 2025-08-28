@@ -12,6 +12,6 @@ namespace Assembleia.Sede.Cadastro.Domain.Entities
         public int CountryId { get; set; }
         public Country Country { get; set; }
 
-        public ICollection<City> Cities { get; set; } = new List<City>();
+        public ICollection<City> Cities { get; set; } 
     }
 }
