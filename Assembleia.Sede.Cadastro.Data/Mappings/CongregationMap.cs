@@ -13,12 +13,12 @@ namespace Assembleia.Sede.Cadastro.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Congregation> builder)
         {
-            builder.ToTable(nameof(Congregation));
+            builder.ToTable("TB_Congregation");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
 
             //Relacionamento
-            builder.HasOne(x => x.City).WithMany(c => c.Congregations).HasForeignKey(x => x.CityId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(x => x.City).WithMany(c => c.Congregations).HasForeignKey(x => x.CityId);
         }
     }
 }

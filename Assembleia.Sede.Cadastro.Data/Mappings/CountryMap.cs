@@ -8,14 +8,14 @@ namespace Assembleia.Sede.Cadastro.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Country> builder)
         {
-            builder.ToTable(nameof(Country));
+            builder.ToTable("TB_Country");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
-            builder.Property(x => x.Iso2).HasMaxLength(3);
+            builder.Property(x => x.IsoTwo).HasMaxLength(3);
 
             //Relacionamento
-        
-            builder.HasMany(x => x.States).WithOne(x => x.Country).HasForeignKey(x => x.CountryId).OnDelete(DeleteBehavior.Restrict); 
+
+            builder.HasMany(x => x.States).WithOne(x => x.Country).HasForeignKey(x => x.CountryId);
         }
     }
 }

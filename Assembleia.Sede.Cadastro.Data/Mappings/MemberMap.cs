@@ -8,7 +8,7 @@ namespace Assembleia.Sede.Cadastro.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Member> builder)
         {
-            builder.ToTable(nameof(Member));
+            builder.ToTable("TB_Member");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
 

@@ -8,7 +8,7 @@ namespace Assembleia.Sede.Cadastro.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<City> builder)
         {
-            builder.ToTable(nameof(City));
+            builder.ToTable("TB_City");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
 
@@ -16,9 +16,9 @@ namespace Assembleia.Sede.Cadastro.Data.Mappings
 
 
             //Relacionamento
-        
-            builder.HasOne(x => x.State).WithMany(x => x.Cities).HasForeignKey(x => x.StateId).OnDelete(DeleteBehavior.Restrict);
-            builder.HasMany(x => x.Members).WithOne(x => x.City).HasForeignKey(x => x.CityId).OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(x => x.State).WithMany(x => x.Cities).HasForeignKey(x => x.StateId);
+            builder.HasMany(x => x.Members).WithOne(x => x.City).HasForeignKey(x => x.CityId);
         }
     }
 }
